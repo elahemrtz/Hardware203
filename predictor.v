@@ -1,4 +1,4 @@
-module SaturatingCounter (input wire request,input wire result,input wire clk,input wire taken,output reg prediction);
+module predictor (input wire request,input wire result,input wire clk,input wire taken,output reg prediction);
 
   reg [1:0] counter = 2'b01; // Initialize the counter to the Weakly Taken state
 
