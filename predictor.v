@@ -5,7 +5,7 @@ module predictor (input wire request,input wire result,input wire clk,input wire
   always @(posedge clk) begin
     if (request) begin
       // Branch outcome update
-      if (result == taken) begin
+      if (result) begin
         case (counter)
           2'b11: counter <= 2'b11; // Saturate at Strongly Taken state
           2'b10: counter <= 2'b11; // Move to Strongly Taken state
