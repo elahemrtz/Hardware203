@@ -1,6 +1,6 @@
 module predictor (input wire request,input wire result,input wire clk,input wire taken,output reg prediction);
 
-  reg [1:0] counter = 2'b00; // Initialize the counter to the Weakly Taken state
+  reg [1:0] counter = 2'b11; // Initialize the counter to the Weakly Taken state
 
   always @(posedge clk) begin
     if (request) begin
