@@ -12,14 +12,14 @@ module predictor (input wire request,input wire result,input wire clk,input wire
           2'b10: counter <= 2'b11; // Move to Strongly Taken state
            2'b01: counter <= 2'b10; // Move to Weakly Not Taken state
            2'b00: counter <= 2'b01; // Move to Weakly Taken state
-        
-          end else begin
+        end
+        else begin
                 
           2'b11: counter <= 2'b10; // Move to Weakly Taken state
           2'b10: counter <= 2'b00; // Move to Strongly Not Taken state
           2'b01: counter <= 2'b00; // Move to Strongly Not Taken state
           2'b00: counter <= 2'b00; // Saturate at Strongly Not Taken state
-        
+        end
       end
       
       
